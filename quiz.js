@@ -8,6 +8,9 @@ var questions = [
 	['How many moons does Venus have?', 0]
 ];
 
+var message = document.getElementById("message"); 
+var score = 0;
+
 /****************************
 	
 Create a quiz based on the array "questions" ['question', correct answer].
@@ -29,24 +32,29 @@ function userInput() {
 	if (number1 === questions[0][1]) {
 
 		alert('Correct!' );
+		score++;
+	
 
 
 	} else {
 
-		alert('Sorry the correct awnser is:' + questions[0][1]);
-
+		alert('Sorry the correct awnser is: ' + questions[0][1]);
 	}
 
+	
+	
+	
 	let number2 = parseInt(prompt(questions[1][0], '')); //1 = saturn array  0=question if i want to output awnser 31 it would be [1][1]
 	
 	if (number2 === questions[1][1]) {
 
 		alert('Correct! You are sooo good!');
+				score++;
 
 
 	} else {
 
-		alert('Sorry the correct awnser is:'+  questions[1][1]);
+		alert('Sorry the correct awnser is: '+  questions[1][1]);
 
 	}
 	
@@ -60,20 +68,20 @@ function userInput() {
 		if (number3 === questions[2][1]) {
 
 		alert('Correct' );
+					score++;
+
+
 
 
 	} else {
 
-		alert('Sorry the correct awnser is:'+ questions[2][1]);
+		alert('Sorry the correct awnser is: '+ questions[2][1]);
 
 	}
 	
 	
-	
 
-
-	let result = number1 + number2 + number3; //here is the result 
-	output.innerHTML = 'Your result is ' + result + '!';
+	message.innerHTML = 'Your result is ' + score +  'out of ' + questions.length + '!';
 
 }
 
