@@ -20,13 +20,59 @@ Use the JSON file 01_quiz.json as data source instead of the default array.
 	
 ****************************/
 
+
+
 function userInput() {
 	'use strict';
 	let number1 = parseInt(prompt(questions[0][0], '')); //0 =earth array  0=question
+
+	if (number1 === questions[0][1]) {
+
+		alert('Correct!' );
+
+
+	} else {
+
+		alert('Sorry the correct awnser is:' + questions[0][1]);
+
+	}
+
 	let number2 = parseInt(prompt(questions[1][0], '')); //1 = saturn array  0=question if i want to output awnser 31 it would be [1][1]
- 	let number3 = parseInt(prompt(questions[2][0], '')); //2= Venus array 0=question
-     //parse allows us to pass a string.
-	let result = number1 + number2 + number3;  //here is the result 
+	
+	if (number2 === questions[1][1]) {
+
+		alert('Correct! You are sooo good!');
+
+
+	} else {
+
+		alert('Sorry the correct awnser is:'+  questions[1][1]);
+
+	}
+	
+	
+	
+	
+
+	let number3 = parseInt(prompt(questions[2][0], '')); //2= Venus array 0=question
+	//parse allows us to pass a string.
+	
+		if (number3 === questions[2][1]) {
+
+		alert('Correct' );
+
+
+	} else {
+
+		alert('Sorry the correct awnser is:'+ questions[2][1]);
+
+	}
+	
+	
+	
+
+
+	let result = number1 + number2 + number3; //here is the result 
 	output.innerHTML = 'Your result is ' + result + '!';
 
 }
